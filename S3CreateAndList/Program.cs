@@ -136,7 +136,7 @@ If you wish to create a bucket, supply a valid, globally unique bucket name.");
             {
                 folders += "/";
             }
-            return Path.Combine(this.settings.S3Folders, name);
+            return Path.Combine(folders, name);
         }
 
         private async Task<S3Result> Put(PutObjectRequest request, IAmazonS3 s3Client)
